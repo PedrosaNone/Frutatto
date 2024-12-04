@@ -1,0 +1,253 @@
+/* produtos.css */
+
+/* Banner específico da página de produtos */
+.produtos-banner {
+    height: 40vh;
+    background: url('../img/NossosProdutos.png') center center no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    text-align: center;
+    margin-top: 80px;
+}
+
+.produtos-banner h1 {
+    font-size: 3.5rem;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Filtros */
+.filtros-container {
+    padding: 2rem 5%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filtro-btn {
+    padding: 0.8rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.filtro-btn.active,
+.filtro-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Grade de Produtos */
+.produtos-pagina {
+    padding: 3rem 5%;
+    background-color: var(--cream);
+}
+
+.produtos-grid {
+    display: flex;
+    overflow-x: auto; /* Permitir rolagem horizontal */
+    scroll-snap-type: x mandatory; /* Habilitar snap para rolagem */
+    gap: 1rem; /* Espaçamento entre os cards */
+    padding: 1rem 0; /* Padding para o contêiner */
+}
+
+.produto-card {
+    flex: 0 0 250px; /* Definir uma largura fixa para os cards */
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    scroll-snap-align: start; /* Alinhar o início do card ao contêiner */
+}
+
+.produto-imagem {
+    position: relative;
+    overflow: hidden;
+}
+
+.produto-imagem img {
+    width: 320px;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.produto-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 470px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.produto-card:hover .produto-overlay {
+    opacity: 1;
+}
+
+.produto-card:hover .produto-imagem img {
+    transform: scale(1.1);
+}
+
+.btn-detalhes {
+    padding: 0.8rem 1.5rem;
+    background: var(--white);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.produto-card:hover .btn-detalhes {
+    transform: translateY(0);
+}
+
+.produto-info {
+    padding: 1.5rem;
+}
+
+.produto-info h3 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.descricao {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.preco {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Paginação */
+.paginacao {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 2rem 0;
+}
+
+.page-btn {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.page-btn.active,
+.page-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .produtos-banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .filtros-container {
+        flex-wrap: wrap;
+    }
+
+    .filtro-btn {
+        width: calc(50% - 0.5rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .filtro-btn {
+        width: 100%;
+    }
+}
+
+/* Adicione ao seu arquivo style.css */
+.ver-mais-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.ver-mais-container .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.ver-mais-container .btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do Carrossel */
+.produtos-grid {
+    display: flex; /* Usar flexbox para o carrossel */
+    overflow-x: auto; /* Permitir rolagem horizontal */
+    scroll-snap-type: x mandatory; /* Habilitar snap para rolagem */
+}
+
+.produto-card {
+    flex: 0 0 auto; /* Impedir que os cards encolham */
+    scroll-snap-align: start; /* Alinhar o início do card ao contêiner */
+    margin-right: 1rem; /* Espaçamento entre os cards */
+}
+
+/* Estilo para esconder a barra de rolagem */
+.produtos-grid::-webkit-scrollbar {
+    display: none; /* Esconder a barra de rolagem no Chrome */
+}
+
+.navegacao {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.prev-button, .next-button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.prev-button:hover, .next-button:hover {
+    background-color: var(--secondary-color);
+}

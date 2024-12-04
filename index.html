@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frutatto</title>
+    <meta name="description" content="A melhor sorveteria da cidade com sabores artesanais e produtos de qualidade">
+    <meta name="keywords" content="sorvete, sorveteria, gelato, sobremesas, milk shake">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/img/LOGO 1.png" alt="Logo Sorveteria Delícia Gelada">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li class="cart-icon">
+                    <a href="#" class="cart-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <div class="cart-dropdown">
+                        <div class="cart-items">
+                            <!-- Itens do carrinho -->
+                        </div>
+                        <div class="cart-total">
+                            <span class="total-label">Total:</span>
+                            <span class="total-value">R$ 0,00</span>
+                        </div>
+                        <div class="cart-actions">
+                            <a href="#" class="btn btn-primary">Finalizar Compra</a>
+                            <button class="btn btn-secondary clear-cart">Limpar Carrinho</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Principal -->
+    <section id="home" class="banner">
+        <div class="banner-content">
+        </div>
+    </section>
+
+    <!-- Seção de Produtos -->
+    <section id="produtos" class="produtos">
+        <h2>Nossos Produtos</h2>
+        <div class="btn-container">
+            <a href="produtos.html" class="btn">Ver Todos os Produtos</a>
+        </div>
+        <div class="produtos-grid">
+            <div class="produto-card"
+            style="width: 700px; height: 500px;"
+            >
+                <img src="assets/img/ChaVermelho.png" alt="Sorvete de Pessego">
+                <h3>Sorvete chá vermelho </h3>
+                <p>A partir de R$ 35,00</p>
+                <button class="btn-comprar">Comprar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Nós -->
+    <section id="sobre" class="sobre">
+        <h2>Sobre Nós</h2>
+        <div class="sobre-content">
+            <img src="assets/img/Sobre nós.png" alt="Nossa História">
+            <div class="texto-sobre">
+                <p>FRUTATTO adota como princípio envolver e alcançar o maior público possível, procurando utilizar
+                    ingedientes que possam ser consumidos por veganos, intolerântes alergicos e também pelo público
+                    abrangente.</p>
+                <p>Todos os nossos produtos são feitos com ingredientes selecionados e muito amor. Prezando sempre em
+                    produtos naturais</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="contato">
+        <h2>Entre em Contato</h2>
+        <div class="contato-container">
+            <form class="form-contato">
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="E-mail" required>
+                <textarea placeholder="Mensagem" required></textarea>
+                <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+            </form>
+            <div class="info-contato">
+                <h3>Informações de Contato</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Rua das Flores, 123</p>
+                <p><i class="fas fa-phone"></i> (11) 1234-5678</p>
+                <p><i class="fas fa-envelope"></i> contato@sorveteria.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Horário de Funcionamento</h3>
+                <p>Segunda a Sábado: 10h às 22h</p>
+                <p>Domingo: 11h às 20h</p>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Inscreva-se</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Seu e-mail">
+                    <button type="submit">Inscrever</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Sorveteria Delícia Gelada. Todos os direitos reservados.</p>
+
+            <!-- Botão da imprensa-->
+            <a href="https://abre.ai/lCw2" class="btn btn-primary" download>Imprensa</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

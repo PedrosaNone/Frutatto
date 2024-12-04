@@ -1,0 +1,590 @@
+/* Importando fontes do Google */
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Quicksand:wght@300..700&display=swap');
+
+/* Reset e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #EA6159;    /* Vermelho coral */
+    --secondary-color: #F6C25F;  /* Amarelo */
+    --accent-color: #AFD7DB;     /* Azul claro */
+    --text-color: #727272;       /* Cinza */
+    --white: #ffffff;            /* Branco */
+    --cream: #F0EFEE;           /* Cinza claro */
+    --highlight-color: #BCD693;  /* Verde claro */
+}
+
+html {
+    scroll-behavior: smooth;
+}x
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background-color: var(--cream);
+}
+
+/* Navbar */
+.navbar {
+    background: var(--cream);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.258);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+/* Banner */
+.banner {
+    height: 100vh;
+    background: url('../img/BannerInicio-100.jpg') center center no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--cream);
+}
+
+.banner-content {
+    padding: 2rem;
+
+}
+
+
+.banner h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.banner p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+    display: inline-block;
+  
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: var(--secondary-color);
+}
+
+/* Produtos */
+.produtos {
+    padding: 5rem 5%;
+    background-color: var(--white);
+}
+
+.produtos h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+    @font-face {
+        font-family:quicksand;
+        src: url(https://www.dafont.com/pt/quicksand.font);
+    }
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.produto-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    
+}
+
+.produto-card:hover {
+    transform: translateY(-10px);
+}
+
+.produto-card img {
+    width: 400px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.produto-card h3 {
+    padding: 1rem;
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.produto-card p {
+    padding: 0 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.btn-comprar {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    background-color: var(--highlight-color);
+    color: var(--white);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+    margin-right: 5px;
+}
+
+.btn-comprar:hover {
+    background-color: var(--primary-color);
+}
+
+/* Sobre Nós */
+.sobre {
+    padding: 5rem 5%;
+    background-color: var(--accent-color);
+    @font-face {
+        font-family: quicksand;
+        src: url(https://www.dafont.com/pt/quicksand.font);
+    }
+}
+
+.sobre-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    font-family: "quicksand" sans-serif;
+    font-size: 50px;
+
+}
+
+.sobre img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.texto-sobre {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Contato */
+.contato {
+    padding: 5rem 5%;
+    background-color: var(--white);
+}
+
+.contato-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-contato input,
+.form-contato textarea {
+    padding: 1rem;
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-contato textarea {
+    height: 150px;
+    resize: none;
+}
+
+.btn-enviar {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 3rem 5% 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: var(--white);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.newsletter-form input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+}
+
+.newsletter-form button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.newsletter-form button:hover {
+    background-color: var(--secondary-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animações */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .banner h1 {
+        font-size: 3rem;
+    }
+    
+    .sobre-content,
+    .contato-container,
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .produtos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+/* Efeitos de Hover e Interação */
+.produto-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.3));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.produto-card:hover::before {
+    opacity: 1;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+/* Produtos */
+.produtos {
+    padding: 5rem 5%;
+    background-color: var(--white);
+}
+
+.produtos h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem; /* Reduzido para dar espaço ao botão */
+    color: var(--primary-color);
+    font-family: "quicksand", sans-serif;
+    
+}
+
+.btn-container {
+    text-align: center;
+    margin-bottom: 3rem; /* Espaço entre o botão e os produtos */
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: var(--secondary-color);
+}
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 40px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-btn {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin-left: 1rem;
+    position: relative;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.cart-link {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ff5252;
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+.cart-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    min-width: 300px;
+    display: none;
+    z-index: 1;
+}
+
+.cart-dropdown.show {
+    display: block;
+}
+
+.cart-items {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.cart-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item-name {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.cart-item-price {
+    color: #888;
+}
+
+.cart-item-remove {
+    background-color: transparent;
+    border: none;
+    color: #ff5252;
+    cursor: pointer;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.cart-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #ff5252;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: #f2f2f2;
+    color: #333;
+    border: none;
+    cursor: pointer;
+}
